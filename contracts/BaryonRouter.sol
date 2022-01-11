@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 /**
  *Submitted for verification at BscScan.com on 2021-04-23
 */
@@ -34,7 +35,7 @@ library TransferHelper {
 
 // File: contracts\interfaces\IBaryonRouter01.sol
 
-pragma solidity >=0.6.2;
+pragma solidity >=0.6.12;
 
 interface IBaryonRouter01 {
     function factory() external pure returns (address);
@@ -132,7 +133,7 @@ interface IBaryonRouter01 {
 
 // File: contracts\interfaces\IBaryonRouter02.sol
 
-pragma solidity >=0.6.2;
+pragma solidity >=0.6.12;
 
 interface IBaryonRouter02 is IBaryonRouter01 {
     function removeLiquidityETHSupportingFeeOnTransferTokens(
@@ -177,7 +178,7 @@ interface IBaryonRouter02 is IBaryonRouter01 {
 
 // File: contracts\interfaces\IBaryonFactory.sol
 
-pragma solidity >=0.5.0;
+pragma solidity >=0.5.17;
 
 interface IBaryonFactory {
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
@@ -199,7 +200,7 @@ interface IBaryonFactory {
 
 // File: contracts\libraries\SafeMath.sol
 
-pragma solidity =0.6.6;
+pragma solidity =0.6.12;
 
 // a library for performing overflow-safe math, courtesy of DappHub (https://github.com/dapphub/ds-math)
 
@@ -219,7 +220,7 @@ library SafeMath {
 
 // File: contracts\interfaces\IBaryonPair.sol
 
-pragma solidity >=0.5.0;
+pragma solidity >=0.5.17;
 
 interface IBaryonPair {
     event Approval(address indexed owner, address indexed spender, uint value);
@@ -274,8 +275,7 @@ interface IBaryonPair {
 
 // File: contracts\libraries\BaryonLibrary.sol
 
-pragma solidity >=0.5.0;
-
+pragma solidity >=0.5.17;
 
 
 library BaryonLibrary {
@@ -358,7 +358,7 @@ library BaryonLibrary {
 
 // File: contracts\interfaces\IERC20.sol
 
-pragma solidity >=0.5.0;
+pragma solidity >=0.5.17;
 
 interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint value);
@@ -378,7 +378,7 @@ interface IERC20 {
 
 // File: contracts\interfaces\IWETH.sol
 
-pragma solidity >=0.5.0;
+pragma solidity >=0.5.17;
 
 interface IWETH {
     function deposit() external payable;
@@ -388,13 +388,7 @@ interface IWETH {
 
 // File: contracts\BaryonRouter.sol
 
-pragma solidity =0.6.6;
-
-
-
-
-
-
+pragma solidity =0.6.12;
 
 contract BaryonRouter is IBaryonRouter02 {
     using SafeMath for uint;
